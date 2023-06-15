@@ -125,11 +125,30 @@ body{
     margin-top: 1rem;
 }
 
-/* hover  */
+/* --------------------------   hover  ------------------------- */
 
 .deco-nav-bar-button:hover{
     filter: brightness(1000%);
 }
+
+.spotify-bottom .flex:hover{
+    filter: brightness(1000%);
+}
+
+.spotify-image a:hover{
+    filter: invert(66%) sepia(89%) saturate(447%)
+    hue-rotate(81deg) brightness(88%) contrast(94%);
+}
+
+.upgrade-container a:hover{
+    filter: invert(14%) sepia(69%) saturate(7475%)
+    hue-rotate(8deg) brightness(78%) contrast(121%);
+}
+
+.col-music img:hover{
+    filter: brightness(60%);
+}
+
 
 /* bottom nav */
 
@@ -177,9 +196,7 @@ hr{
     color: var(--color-secondary);
 }
 
-.spotify-bottom .flex:hover{
-    filter: brightness(1000%);
-}
+
 
 
 
@@ -212,7 +229,7 @@ hr{
     width: calc(100% - var(--nav-menu-left));
 }
 
-/* contenitore di nav canzoni e canzoni */
+/* contenitore di nav canzoni */
 .songs-container{width: 100%;}
 .music-container{
     padding-top: var(--upgrade-container);
@@ -279,6 +296,21 @@ h5{
 .round{
     border-radius: 50%;
 }
+
+.song-image i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 4rem;
+    /* background-color: rgba(0, 0, 0, 0.26); */
+}
+
+
+
+
+
+
 
 
 
