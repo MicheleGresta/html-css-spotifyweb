@@ -4,21 +4,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <div class="full-page">
         <div class="main-boxes flex column">
             <div class="main grow1 flex relative" style="background-color: rgb(20, 25, 34);">
-                <div class="nav-menu" style="background-color: rgba(0, 0, 0, 0.952);">
-
+                <div class="nav-menu flex column" style="background-color: rgba(0, 0, 0, 0.952);">
+                    <div class="spotify-top">
+                        <div class="spotify-image">
+                            <img src="./img/logo.svg" alt="">
+                        </div>
+                        <div class="home-menu flex column">
+                            <div class="flex">
+                                <a class="flex deco-nav-bar-button" href="#">
+                                    <i class="fa-solid fa-house"></i>
+                                    <h5>Home</h5>
+                                </a>    
+                            </div>
+                            <div class="flex">
+                                <a class="flex deco-nav-bar-button" href="#">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                    <h5>Cerca</h5>
+                                </a>
+                            </div>
+                            <div class="flex">
+                                <a class="flex deco-nav-bar-button" href="#">
+                                    <i class="fa-solid fa-lines-leaning"></i>
+                                    <h5>La tua libreria</h5>
+                                </a>
+                            </div>
+                        </div>
+                        <h4>PLAYLIST</h4>
+                        <div class="playlist-box flex column">
+                            <div class="flex">
+                                <a class="flex deco-nav-bar-button" href="#">
+                                    <div class="plus">
+                                        <i class="fa-solid fa-plus"></i>
+                                    </div>
+                                    <h5>Crea Playlist</h5>
+                                </a>    
+                            </div>                            
+                            <ul class="ul-playlist">
+                                <li><a class="flex deco-nav-bar-button" href="#"><h5>Nome Playlist</h5></a></li>
+                                <li><a class="flex deco-nav-bar-button" href="#"><h5>Nome Playlist</h5></a></li>
+                                <li><a class="flex deco-nav-bar-button" href="#"><h5>Nome Playlist</h5></a></li>
+                                <li><a class="flex deco-nav-bar-button" href="#"><h5>Nome Playlist</h5></a></li>
+                                <li><a class="flex deco-nav-bar-button" href="#"><h5>Nome Playlist</h5></a></li>
+                                <li><a class="flex deco-nav-bar-button" href="#"><h5>Nome Playlist</h5></a></li>
+                                <li><a class="flex deco-nav-bar-button" href="#"><h5>Nome Playlist</h5></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="spotify-bottom">
+                        <div class="flex">
+                            <div class="arrow-down"><a href="#"><i class="fa-solid fa-arrow-down"></i></a></div>
+                            <a href="#"><h5>Installa app</h5></a>
+                        </div>
+                        <hr>
+                        <div class="user-container flex">
+                            <a href="#"><i class="fa-solid fa-circle-user"></i></a>
+                            <a href="#"><h3>John Doe</h3></a>
+                        </div>
+                    </div>
                 </div>
-                <div class="main-internal grow1 relative" style="background-color: rgb(20, 25, 34);">
+                <div class="main-internal grow1 relative overflow-auto" style="background-color: rgb(20, 25, 34);">
                     <div class="fixed width-upgrade-bar">
                         <div class="upgrade-container flex" style="background-color: rgba(0, 0, 0, 0.281);">                            
                             <a href="#"><strong>EFFETTUA L'UPGRADE</strong></a>                            
                         </div>
                     </div>    
-                    <div class="music-container grow1 overflow-auto">
+                    <div class="music-container grow1 ">
                         <div class="nav-bar-music-internal">
                             <ul class="flex">
                                 <li><a href="#">EVIDENZA</a></li>
@@ -29,7 +87,7 @@
                                 <li><a href="#">SCOPRI</a></li>
                             </ul>
                         </div>
-                        <div class="songs-container grow1">
+                        <div class="songs-container grow1 ">
                             <div class="section">
                                 <div class="titolo">
                                     <h3>Recently played</h3>
