@@ -13,7 +13,6 @@
 
 body{
     height: 100vh;
-    overflow: hidden;
 }
 
 /* Utilities classes */
@@ -54,7 +53,7 @@ body{
 
 /* internal page */
 .nav-menu{
-    width: var(--nav-menu-left);
+    min-width: var(--nav-menu-left);
 }
 
 .upgrade-container{
@@ -82,6 +81,7 @@ body{
 }
 
 /* contenitore di nav canzoni e canzoni */
+.songs-container{width: 100%;}
 .music-container{
     padding-top: var(--upgrade-container);
 }
@@ -92,15 +92,66 @@ body{
 }
 
 .nav-bar-music-internal li{
-    padding: 2rem 1rem;
+    padding: 1.5rem 1rem;
     list-style: none;
 }
 
 .nav-bar-music-internal a{
     text-decoration: none;
-    color: rgb(103, 106, 111)
+    color: rgb(103, 106, 111);
 }
 
 .nav-bar-music-internal a:hover{
     color: white;
 }
+
+/* music sections */
+.section{
+    margin: 1.5rem;
+}
+
+.titolo h3{
+    color: white;
+    font-size: 1.8rem;
+}
+
+.box-songs{
+    gap: 1.5rem;
+    text-align: center;
+}
+
+.col-music{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+.col-music img{
+    width: 100%;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+h4{
+    color: white;
+    font-size: 1.5rem;
+    width: 100%;
+}
+
+h5{
+    color: rgb(103, 106, 111);
+    font-size: 1.2rem;
+}
+
+.round{
+    border-radius: 50%;
+}
+
+/* player */
+/* .player{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+} */
