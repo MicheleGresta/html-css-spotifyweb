@@ -56,8 +56,8 @@ body{
 
 /* nav bar spotify sinistra */
 
-.nav-menu{
-    justify-content: space-between;
+.nav-menu .spotify-mid{
+    flex-grow: 1;
 }
 
 /* top */
@@ -92,7 +92,7 @@ body{
     text-decoration: none;
 }
 
-.spotify-top > h4{
+.spotify-mid > h4{
     padding: 1rem 2rem 1rem;
     margin-top: 1rem;
 }
