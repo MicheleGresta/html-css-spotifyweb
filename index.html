@@ -16,6 +16,7 @@
                     <div class="spotify-top">
                         <div class="spotify-image">
                             <a href="#"><img src="./img/logo.svg" alt=""></a>
+                            <a href="#"><img src="./img/logo-small.svg" alt=""></a>
                         </div>
                         <div class="home-menu flex column">
                             <div class="flex">
@@ -48,7 +49,8 @@
                                     </div>
                                     <h5>Crea Playlist</h5>
                                 </a>    
-                            </div>                    
+                            </div>
+                            <div>                    
                                 <ul class="ul-playlist">
                                     <li><a class="flex deco-nav-bar-button" href="#"><h5>Nome Playlist</h5></a></li>
                                     <li><a class="flex deco-nav-bar-button" href="#"><h5>Nome Playlist</h5></a></li>
@@ -58,7 +60,7 @@
                                     <li><a class="flex deco-nav-bar-button" href="#"><h5>Nome Playlist</h5></a></li>
                                     <li><a class="flex deco-nav-bar-button" href="#"><h5>Nome Playlist</h5></a></li>
                                 </ul>
-                                
+                            </div>    
                         </div>                        
                     </div>
                     <div class="spotify-bottom">
@@ -82,12 +84,12 @@
                     <div class="music-container grow1 ">
                         <div class="nav-bar-music-internal">
                             <ul class="flex">
-                                <li><a href="#">EVIDENZA</a></li>
-                                <li><a href="#">PODCAST</a></li>
-                                <li><a href="#">CLASSIFICHE</a></li>
-                                <li><a href="#">GENERI E MOOD</a></li>
-                                <li><a href="#">NUOVE USCITE</a></li>
-                                <li><a href="#">SCOPRI</a></li>
+                                <li><a href="#">EVIDENZA</a><div class="green-bar"></div></li>
+                                <li><a href="#">PODCAST</a><div class="green-bar"></div></li>
+                                <li><a href="#">CLASSIFICHE</a><div class="green-bar"></div></li>
+                                <li><a href="#">GENERI E MOOD</a><div class="green-bar"></div></li>
+                                <li><a href="#">NUOVE USCITE</a><div class="green-bar"></div></li>
+                                <li><a href="#">SCOPRI</a><div class="green-bar"></div></li>
                             </ul>
                         </div>
                         <div class="songs-container grow1 ">
@@ -194,12 +196,32 @@
                         </div>
                     </div>
                     <!-- box 2 -->
-                    <div class="section-player"></div>
+                    <div class="section-player section-player-mid">
+                        <div class="player-action flex">
+                            <i class="fa-solid fa-shuffle"></i>
+                            <i class="fa-solid fa-backward-step"></i>
+                            <i class="fa-regular fa-circle-play"></i>
+                            <i class="fa-solid fa-forward-step"></i>
+                            <i class="fa-solid fa-rotate-right"></i>
+                        </div>
+                        <div class="song-duration flex">
+                            <span>0:25</span>
+                            <div class="volume-bar">
+                                <div class="volume-bar-1"></div>
+                                <div class="volume-bar-2"></div>
+                            </div>
+                            <span>4:35</span>
+                        </div>
+                    </div>
                     <!-- box 3 -->
                     <div class="section-player flex">
                         <i class="fa-solid fa-bars"></i>
                         <i class="fa-solid fa-desktop"></i>
                         <i class="fa-solid fa-volume-high"></i>
+                        <div class="volume-bar">
+                            <div class="volume-bar-1"></div>
+                            <div class="volume-bar-2"></div>
+                        </div>
                     </div>
                 </div>
             </div>

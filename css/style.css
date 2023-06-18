@@ -1,6 +1,6 @@
 :root{
     --player-height:150px;
-    --nav-menu-left:350px;
+    --nav-menu-left:300px;
     --upgrade-container:120px;
     --color-secondary: rgb(103, 106, 111);
     
@@ -15,6 +15,7 @@
 
 body{
     height: 100vh;
+    overflow: hidden;
 }
 
 /* Utilities classes */
@@ -56,6 +57,10 @@ body{
 
 /* nav bar spotify sinistra */
 
+.nav-menu{
+    overflow: hidden;
+}
+
 .nav-menu .spotify-mid{
     flex-grow: 1;
 }
@@ -64,6 +69,9 @@ body{
 
 .spotify-image{
     width: 100%;
+}
+.spotify-image a:nth-child(2){
+    display: none;
 }
 .spotify-image img{
     width: 75%;
@@ -91,6 +99,17 @@ body{
 .playlist-box a{
     text-decoration: none;
 }
+ /* mid */
+
+.spotify-mid,
+.spotify-mid > *{
+    overflow: hidden;
+}
+.spotify-mid ul{
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
 
 .spotify-mid > h4{
     padding: 1rem 2rem 1rem;
@@ -116,19 +135,22 @@ body{
 }
 
 .ul-playlist li{
-    padding: .8rem 0;
+    padding: .8rem 0rem;
     list-style: none;
 }
 
 .ul-playlist{
-    padding-left: 2rem;
     margin-top: 1rem;
+}
+.ul-playlist a{
+    padding-left: 2rem;
 }
 
 /* --------------------------   hover  ------------------------- */
 
 .deco-nav-bar-button:hover{
     filter: brightness(1000%);
+    border-left: 4px solid green;
 }
 
 .spotify-bottom .flex:hover{
@@ -147,8 +169,8 @@ body{
 
 .col-music img:hover{
     filter: brightness(60%);
+    width: 110%;
 }
-
 
 /* bottom nav */
 
@@ -177,13 +199,13 @@ body{
 
 .user-container  h3{
     color: white;
-    font-size: 1.7rem;
+    font-size: 1.3rem;
 
 }
 
 .user-container i{
     color: var(--color-secondary);
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
 
 .user-container a,
@@ -253,7 +275,17 @@ hr{
 .nav-bar-music-internal a:hover{
     color: white;
 }
-
+.nav-bar-music-internal a:hover ~ .green-bar{
+    display: block;
+    margin: 0 auto;
+}
+.green-bar{
+    width: 40%;
+    background-color: rgb(33, 219, 33);
+    height: 4px;
+    border-radius: 30px;
+    display: none;
+}
 /* music sections */
 .section{
     margin: 1.5rem 1.5rem 3rem;
@@ -307,6 +339,109 @@ h5{
 }
 
 
+/* player bottom */
+
+.container-player{
+    justify-content: space-between;
+    align-items: center;
+}
+
+.player-song-info{
+    width: 100%;
+    align-items: center;
+    gap: 1rem;
+}
+
+.player-song-info img{
+    width: 80px;
+    height: 80px;
+}
+
+.section-player {
+    width: var(--nav-menu-left);
+    justify-content: center;
+    align-items: center;    
+    padding: 2rem 1rem;
+    gap: 1rem;
+}
+
+.player-song-items{
+    gap: 1rem;
+}
+
+.player-song-items i{
+    font-size: 1.5rem;
+    color: var(--color-secondary);
+}
+
+.section-player > i{
+    color: white;
+}
+
+.volume-bar{
+    width: 100%;    
+    position: relative;
+}
+
+.volume-bar-1{
+    height: 5px;
+    width: 100%;
+    background-color: rgb(136, 136, 136);
+    border-radius: 30px;
+}
+
+.volume-bar-2{
+    height: 5px;
+    width: 20%;
+    background-color: rgb(224, 224, 224);
+    border-radius: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.section-player > i:hover{
+    color: rgb(136, 136, 136);
+}
+
+/* middle player */
+
+.section-player-mid{
+    flex-grow: 1;
+    max-width: calc((var(--nav-menu-left)*1.8));
+}
+
+.player-action{
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.player-action > *{
+    color: white;
+}
+
+.player-action > *:hover {
+    color: rgb(136, 136, 136);
+}
+
+.player-action > i:nth-child(3):hover{
+    font-size: 2.5rem;
+}
+.player-action > i:nth-child(3){
+    font-size: 2rem;
+}
+
+.song-duration{
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.song-duration > span{
+    color: white;
+}
 
 
 
@@ -334,8 +469,43 @@ h5{
     .col-music{
         width: 45%;
     }
+    .player-song-items{
+        flex-direction: column;
+        gap: 0.5rem;
+    }
 }
 
 @media screen and (max-width:700px) {
-    .col-music{
+    .nav-menu h5,
+    .spotify-mid,
+    h3,
+    hr{
+        display: none;
+    }
+    .nav-menu{
+        justify-content: space-between;
+        min-width: 100px;
+    }
+    .spotify-image a:nth-child(1){
+        display: none;
+    }
+    .spotify-image a:nth-child(2){
+        display: block;
+        width: 100%;
+    }
+    .spotify-image img{
+        width: 100%;
+        padding: 1.5rem;
+    }
+    .nav-menu{
+        align-items: center;
+    }
+    .spotify-bottom .flex{
+        margin-left: 1rem;
+        padding: 0;
+    }
+    
+
+    .width-upgrade-bar {
+        width: calc(100% - 100px);
 }
