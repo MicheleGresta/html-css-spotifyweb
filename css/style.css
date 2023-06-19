@@ -169,7 +169,7 @@ body{
 
 .col-music img:hover{
     filter: brightness(60%);
-    width: 110%;
+    transform: scale(1.1);
 }
 
 /* bottom nav */
@@ -263,13 +263,15 @@ hr{
 }
 
 .nav-bar-music-internal li{
-    padding: 1.5rem 1rem;
+    padding:1.5rem 1rem 10px;
     list-style: none;
+    position: relative;
 }
 
 .nav-bar-music-internal a{
     text-decoration: none;
     color: var(--color-secondary);
+
 }
 
 .nav-bar-music-internal a:hover{
@@ -285,6 +287,10 @@ hr{
     height: 4px;
     border-radius: 30px;
     display: none;
+    position: absolute;
+    bottom: 0;
+    left: calc(30%);
+    margin: 0 auto;
 }
 /* music sections */
 .section{
@@ -427,7 +433,7 @@ h5{
 }
 
 .player-action > i:nth-child(3):hover{
-    font-size: 2.5rem;
+    transform: scale(1.3);
 }
 .player-action > i:nth-child(3){
     font-size: 2rem;
