@@ -14,7 +14,7 @@
 }
 
 body{
-    height: 100vh;
+    height: 100vh;  
     overflow: hidden;
 }
 
@@ -57,9 +57,6 @@ body{
 
 /* nav bar spotify sinistra */
 
-.nav-menu{
-    overflow: hidden;
-}
 
 .nav-menu .spotify-mid{
     flex-grow: 1;
@@ -101,15 +98,18 @@ body{
 }
  /* mid */
 
-.spotify-mid,
-.spotify-mid > *{
-    overflow: hidden;
-}
-.spotify-mid ul{
-    overflow: scroll;
-    overflow-x: hidden;
+.spotify-mid{
+    overflow: auto;
 }
 
+.playlist-box{
+    overflow: auto;
+}
+
+.spotify-mid .ul-playlist{
+    overflow: auto;
+    flex-grow: 1;
+}
 
 .spotify-mid > h4{
     padding: 1rem 2rem 1rem;
